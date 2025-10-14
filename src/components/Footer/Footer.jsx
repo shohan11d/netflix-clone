@@ -6,7 +6,7 @@ import facebook_icon from "../../assets/instagram_icon.png";
 function Footer() {
   return (
     <div className="footer">
-      <div className="footerricons">
+      <div className="footer-icons">
         <img src={facebook_icon} alt="facebook_icon" />
         <img src={twitter_icon} alt="twitter_icon" />
         <img src={instagram_icon} alt="instagram_icon" />
