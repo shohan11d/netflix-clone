@@ -2,11 +2,12 @@ import "./Player.css";
 import back_arrow_icon from "../../assets/back_arrow_icon.png";
 import play_icon from "../../assets/play_icon.png";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 // Bugged
 function Player() {
   const { id } = useParams();
+const navigate = useNavigate();
   const [apiData, setApiData] = useState({
     name: "",
     key: "",
@@ -35,9 +36,9 @@ function Player() {
 
   return (
     <div className="player">
-      <img src={back_arrow_icon} alt="" />
+      <img src={back_arrow_icon} alt="" onClick={() => navigate(-2)}/>
       <iframe
-        src="https://www.youtube.com/embed/4vtSa3m7PJs"
+        src={`https://www.youtube.com/embed/${apiData.key}`}
         title="How to choose a Netflix Streaming Plan | Netflix"
         frameborder="0"
         allowfullscreen
