@@ -18,7 +18,7 @@
 }
 
 .hero_caption p {
-  font-size: 13px;
+  font-size: 16px;
   max-width: 700px;
   margin-bottom: 20px;
 }
@@ -55,6 +55,9 @@
 
 .hero_btns .btn .dark-btn:hover {
     background: #6d6d6e66;
+}
+.more-cards{
+  padding-left: 6%;
 }
 
 @media (max-width:1024px) {
@@ -100,7 +103,7 @@
     font-size: 10px;
   }
   .hero_caption p {
-    font-size: 10px;
+    font-size: 8px;
     display: none;
   }
 }

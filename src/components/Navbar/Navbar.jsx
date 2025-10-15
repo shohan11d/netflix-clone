@@ -6,7 +6,8 @@ import profile_img from "../../assets/profile_img.png";
 import caret_icon from "../../assets/caret_icon.svg";
 import { useEffect, useRef } from "react";
 import { logout } from "../../firebase";
-  import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const navRef = useRef();
@@ -23,7 +24,9 @@ function Navbar() {
   return (
     <div ref={navRef} className="navbar">
       <div className="navbar-left">
+        <Link to="/">
         <img src={logo} alt="" />
+        </Link>
         <ul>
           <li>Home</li>
           <li>TV Shows</li>

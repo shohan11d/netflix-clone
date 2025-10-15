@@ -1,7 +1,7 @@
 import "./Player.css";
 import back_arrow_icon from "../../assets/back_arrow_icon.png";
 import play_icon from "../../assets/play_icon.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 // Bugged
@@ -12,7 +12,7 @@ const navigate = useNavigate();
     name: "",
     key: "",
     published_at: "",
-    typeof: "",
+    type: "",
   });
 
   const options = {
@@ -33,7 +33,6 @@ const navigate = useNavigate();
       .then((res) => setApiData(res.results[0]))
       .catch((err) => console.log(err));
   }, [id]);
-
   return (
     <div className="player">
       <img src={back_arrow_icon} alt="" onClick={() => navigate(-2)}/>

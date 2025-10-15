@@ -12,10 +12,10 @@ function App() {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      if (user) {
+      if (user && window.location.pathname === "/login") {
         console.log("Logged In");
         navigate("/");
-      } else {
+      } else if (!user) {
         console.log("Logged Out");
         navigate("/login");
       }
